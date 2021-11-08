@@ -1,12 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* disabled since tailwind JIT mode does not allow @apply directive */
+
+/* :root {
+  @apply light;
+}  */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+
+.dark {
+  --color-bg-primary: #29374b;
+  --color-bg-secondary: #3f5169;
+  --color-bg-tertiary: #f3f3f3;
+  --color-bg-accent: #6461af;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #A5B4FC;
+}
+
+.light {
+  --color-bg-primary: #fcfcfc;
+  --color-bg-secondary: #6e5c5c;
+  --color-bg-tertiary: #806f6f;
+  --color-bg-accent: #9692df;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #9CA3AF;
+  --color-text-accent: #04d9ff;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
