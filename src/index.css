@@ -10,35 +10,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 
-
-.dark {
-  --color-bg-primary: #29374b;
-  --color-bg-secondary: #3f5169;
-  --color-bg-tertiary: #f3f3f3;
-  --color-bg-accent: #6461af;
-  --color-text-primary: #f7fafc;
-  --color-text-secondary: #e2e8f0;
-  --color-text-accent: #A5B4FC;
-}
-
 .light {
-  --color-bg-primary: #fcfcfc;
-  --color-bg-secondary: #6e5c5c;
-  --color-bg-tertiary: #806f6f;
-  --color-bg-accent: #9692df;
-  --color-text-primary: #1F2937;
-  --color-text-secondary: #9CA3AF;
-  --color-text-accent: #04d9ff;
+  --color-bg-primary: hsl(0, 0%, 98%);
+  --color-bg-secondary: hsl(236, 33%, 92%);
+  --color-bg-tertiary: hsl(233, 11%, 84%);
+  --color-text-primary: hsl(235, 21%, 11%);
+  --color-text-secondary: hsl(235, 24%, 19%);
+  --color-text-accent: hsl(236, 9%, 61%);
 }
+.dark {
+  --color-bg-primary: hsl(235, 21%, 11%);
+  --color-bg-secondary: hsl(235, 24%, 19%);
+  --color-bg-tertiary: hsl(234, 39%, 85%);
+  --color-text-primary: hsl(0, 0%, 98%);
+  --color-text-secondary: hsl(236, 33%, 92%);
+  --color-text-accent: hsl(234, 11%, 52%);
+}
+
+.dashboard{
+  width: 540px;
+  align-content: center;
+}
+
 
 body {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  font-size: 36px;
+  
 }

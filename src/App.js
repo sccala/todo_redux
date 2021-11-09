@@ -1,26 +1,16 @@
 // @ts-nocheck
-import { DarkModeToggle } from './Button/Toggle';
+import { Dashboard } from './components/Dashboard';
+import { Navbar } from './components/Navbar';
 import { ThemeProvider } from './hooks/providers/themeContext'
 
 
 function App() {
   return (
     <ThemeProvider initialTheme>
-      <div className=''>
-        <header className='h-screen bg-check'>
-          <p className='text-brightblue'>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <DarkModeToggle />
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='h-screen w-screen bg-primary'>
+        <Navbar />
+        <Dashboard />
+       
       </div>
     </ThemeProvider>
   )
