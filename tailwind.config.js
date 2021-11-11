@@ -5,13 +5,20 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './src/components/*.{js,jsx}', './public/index.html'],
   darkMode: 'class',
   theme: {
-     letterSpacing: {
-       tightest: '-.075em',
-        tighter: '-.05em',
-        normal: '0',
-        wider: '.05em',
-       widest: '.25em',
-      },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      normal: '0',
+      wider: '.05em',
+      widest: '.25em',
+    },
+    screens: {
+      mobile: '375px',
+      // => @media (min-width: 375px) { ... }
+
+      desktop: '1440px',
+      // => @media (min-width: 1280px) { ... }
+    },
     colors: {
       brightblue: 'hsl(220, 98%, 61%)',
       verydarkgrayblue: 'hsl(235, 19%, 35%)',
