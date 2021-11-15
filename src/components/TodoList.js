@@ -20,11 +20,11 @@ export const TodoList = ({ todos, setTodos, filteredTodos, filterStatus, setFilt
 
   return (
     <>
-      <section className='todo-list-section'>
+      <section className='bg-white dark:bg-secondary text-primary p-8 shadow-lg rounded-lg'>
         {filteredTodos.length < 1 ? (
           <p className='info-text'>There's no {textPlacer}</p>
         ) : (
-          <ul className='todo-list'>
+          <ul className=''>
             {filteredTodos.map(todo => (
               <TodoItem todo={todo} key={todo.id} setTodos={setTodos} todos={todos} />
             ))}
@@ -46,12 +46,12 @@ export const TodoList = ({ todos, setTodos, filteredTodos, filterStatus, setFilt
         </div>
       </section>
 
-      {/* For Mobile */}
+      {/* For Mobile
       <section className='filter-control-for-mobile'>
         <div className='control-btn group'>
           <TodoFilter filterStatus={filterStatus} setFilterStatus={setFilterStatus} />
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { IncompletedIcon } from './CheckIcon'
 
 const generateId = array => {
   const ids = array.map(item => item.id)
   return Math.max(...ids) + 1
 }
+
+const onClickComplete = () => {}
 
 export const TodoForm = ({ todos, setTodos }) => {
   const [todoInput, setTodoInput] = useState('')
@@ -24,17 +27,13 @@ export const TodoForm = ({ todos, setTodos }) => {
   }
 
   return (
-    <div className='form-control'>
-      <div className='checkbox-border-wrap'>
-        <span className='checkbox'></span>
-      </div>
-
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='todoInput'>Add New Todo</label>
+    <div className='form-control flex justify-items-stretch bg-white dark:bg-secondary items-center w-full'>
+      <form className='flex' onSubmit={handleSubmit}>
+        <IncompletedIcon onClick={onClickComplete} />
         <input
           type='text'
           name='todo-input'
-          className='todo-input'
+          className='w-full h-12 shadow-lg rounded-md'
           id='todoInput'
           placeholder='Create a new todo...'
           value={todoInput}

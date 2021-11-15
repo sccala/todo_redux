@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { DarkModeToggle } from './button/Toggle'
 import { Footer } from './components/Footer'
 import { Navbar } from './components/Navbar'
-import { TodoItem } from './components/TodoItem'
+import { TodoForm } from './components/TodoForm'
 import { TodoList } from './components/TodoList'
 import { ThemeProvider } from './hooks/providers/themeContext'
 
@@ -13,7 +13,7 @@ const data = [
   { id: 3, content: '10 minutes meditation', completed: false },
   { id: 4, content: 'Read for 1 hour', completed: false },
   { id: 5, content: 'Pick up groceries', completed: false },
-  { id: 6, content: 'Complete Todo App on Frontend Mentor', completed: false }
+  { id: 6, content: 'Complete Todo App on Frontend Mentor', completed: false },
 ]
 
 function App() {
@@ -41,17 +41,18 @@ function App() {
       <div className='h-full w-screen bg-primary  -mt-28'>
         <div className='dashboard mx-auto'>
           <div className='flex items-center  justify-between place-items-center'>
-            <h1 className=' text-gray-100 font-bold tracking-widest'>TODO</h1>
+            <h1 className='text-gray-100 font-bold tracking-widest'>TODO</h1>
             <DarkModeToggle />
           </div>
-          {/* <TodoList
+          <TodoForm todos={todos} setTodos={setTodos} />
+          <TodoList
             todos={todos}
             setTodos={setTodos}
             filteredTodos={filteredTodos}
             filterStatus={filterStatus}
             setFilterStatus={setFilterStatus}
-          /> */}
-          {/* <TodoItem /> */}
+          />
+         
         </div>
         <Footer />
       </div>

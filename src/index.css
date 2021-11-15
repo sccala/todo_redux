@@ -45,3 +45,10 @@ h1{
   font-size: 36px;
 }
 
+.form-control form {
+  width: 100%;
+}
+.form-control form label,
+#submitNewTodo {
+  display: none;
+}

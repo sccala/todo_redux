@@ -1,11 +1,10 @@
 // @ts-nocheck
 import { useState } from 'react'
-import { CheckIcon } from '../images/CheckIcon'
-
+import {  IncompletedIcon } from './CheckIcon'
 
 export const TodoItem = ({ todo, todos, setTodos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo)
-  const classes = mutableTodo.completed ? 'completed' : ''
+  const classes = mutableTodo.completed === true ? 'completed' : ''
 
   const toggleCompleted = () => {
     setMutableTodo({ ...mutableTodo, completed: !mutableTodo.completed })
@@ -14,21 +13,20 @@ export const TodoItem = ({ todo, todos, setTodos }) => {
     )
     setTodos(updatedTodos)
   }
-  const checkIcon = mutableTodo.completed ? <CheckIcon onClick={toggleCompleted} /> : ''
+  const checkIcon =
+    mutableTodo.completed === true ? <IncompletedIcon onClick={toggleCompleted} /> : ''
 
   return (
     <>
-      <li className={classes}>
-        <label htmlFor={`todoCheckbox-${todo.id}`}>Completed Checkbox</label>
-        <input
-          type='checkbox'
-          name='completed-checkbox'
-          defaultChecked={mutableTodo.completed}
-          className='outline-none shadow border-none rounded my-8 py-2 px-3 text-primary bg-secondary w-full'
-        />
-        <div className='checkbox-border-wrap'>
-          <span className='checkbox'>{checkIcon}</span>
-          <p>{mutableTodo.content}</p>
+      <li className={`${classes} py-4`} >
+        <label className='hidden' htmlFor={`todoCheckbox-${todo.id}`}>
+          Completed Checkbox
+        </label>
+        <div className='flex '>
+          <div className='pt-2  flex'>
+            <IncompletedIcon className='mr-2' onClick={checkIcon} />
+            <p className=''>{mutableTodo.content}</p>
+          </div>
         </div>
       </li>
     </>
