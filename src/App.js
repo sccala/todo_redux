@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import { DarkModeToggle } from './button/Toggle'
 import { Footer } from './components/Footer'
-import { Navbar } from './components/Navbar'
 import { TodoForm } from './components/TodoForm'
 import { TodoList } from './components/TodoList'
 import { ThemeProvider } from './hooks/providers/themeContext'
@@ -20,6 +19,7 @@ function App() {
   const [todos, setTodos] = useState(data)
   const [filterStatus, setFilterStatus] = useState('all')
   const [filteredTodos, setFilteredTodos] = useState(todos)
+  // const { theme, setTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     const handleFilter = () => {
@@ -37,9 +37,8 @@ function App() {
 
   return (
     <ThemeProvider initialTheme>
-      <div className='bg-primary mx-auto'>
-        <Navbar />
-        <div className='h-full dashboard bg-primary -mt-24'>
+      <div className='md:dark:bg-dark md:bg-light sm:bg-lightmobile sm:dark:bg-darkmobile w-full bg-no-repeat bg-contain bg-primary  mx-auto py-8'>
+        <div className='min-w-350 sm:w-4/5 md:w-3/5 lg:w-1/3 mx-auto my-0 content-center'>
           <div className='flex justify-between place-items-center'>
             <h1 className='text-gray-100 font-bold tracking-widest'>TODO</h1>
             <DarkModeToggle />
@@ -55,6 +54,8 @@ function App() {
         </div>
         <Footer />
       </div>
+
+      {/* </div> */}
     </ThemeProvider>
   )
 }

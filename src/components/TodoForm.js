@@ -28,14 +28,14 @@ export const TodoForm = ({ todos, setTodos }) => {
 
   return (
     <div
-      className='items-center h-12 flex bg-white dark:bg-secondary w-full'
+      className='items-center pl-8 h-12 flex bg-white dark:bg-secondary w-full rounded-md shadow-lg mb-4'
       onSubmit={handleSubmit}
     >
       <IncompletedIcon className={`align-middle`} onClick={onClickComplete} />
       <input
         type='text'
         name='todo-input'
-        className='w-full pl-4 bg-white dark:bg-secondary text-primary rounded-md'
+        className='w-full bg-white dark:bg-secondary text-primary '
         id='todoInput'
         placeholder='Create a new todo...'
         value={todoInput}

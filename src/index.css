@@ -50,15 +50,12 @@ h1{
   display: none;
 } */
 
-.dashboard{
-  width: 540px;
-  align-content: center;
-}
 
 
 input.middle:focus {
     outline-width: 0;
 }
+
 input:focus,
 select:focus,
 textarea:focus,

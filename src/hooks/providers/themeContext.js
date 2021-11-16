@@ -21,11 +21,9 @@ const getInitialTheme = () => {
 
 export const ThemeProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = useState(getInitialTheme)
-
   const checkTheme = theme => {
     const root = window.document.documentElement
     const isDark = theme === 'dark'
-
     root.classList.remove(isDark ? 'light' : 'dark')
     root.classList.add(theme)
 

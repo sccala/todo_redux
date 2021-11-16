@@ -24,9 +24,8 @@ module.exports = {
     },
     screens: {
       sm: '375px',
-      // => @media (min-width: 375px) { ... }
+      md: '720px',
       lg: '1440px',
-      // => @media (min-width: 1280px) { ... }
     },
     colors: {
       brightblue: 'hsl(220, 98%, 61%)',
