@@ -20,7 +20,7 @@ export const TodoList = ({ todos, setTodos, filteredTodos, filterStatus, setFilt
 
   return (
     <>
-      <section className='bg-white dark:bg-secondary text-primary p-8 shadow-lg rounded-lg'>
+      <section className='bg-white dark:bg-secondary text-primary pb-8 px-8 shadow-lg rounded-lg'>
         {filteredTodos.length < 1 ? (
           <p className='info-text'>There's no {textPlacer}</p>
         ) : (

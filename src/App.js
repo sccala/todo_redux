@@ -37,10 +37,10 @@ function App() {
 
   return (
     <ThemeProvider initialTheme>
-      <Navbar />
-      <div className='h-full w-screen bg-primary  -mt-28'>
-        <div className='dashboard mx-auto'>
-          <div className='flex items-center  justify-between place-items-center'>
+      <div className='bg-primary mx-auto'>
+        <Navbar />
+        <div className='h-full dashboard bg-primary -mt-24'>
+          <div className='flex justify-between place-items-center'>
             <h1 className='text-gray-100 font-bold tracking-widest'>TODO</h1>
             <DarkModeToggle />
           </div>
@@ -52,7 +52,6 @@ function App() {
             filterStatus={filterStatus}
             setFilterStatus={setFilterStatus}
           />
-         
         </div>
         <Footer />
       </div>

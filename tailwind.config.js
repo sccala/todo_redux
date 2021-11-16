@@ -4,6 +4,7 @@ module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './src/components/*.{js,jsx}', './public/index.html'],
   darkMode: 'class',
+
   theme: {
     letterSpacing: {
       tightest: '-.075em',
@@ -13,19 +14,18 @@ module.exports = {
       widest: '.25em',
     },
     borderWidth: {
-        DEFAULT: '1px',
-        '0': '0',
-        '2': '2px',
-       '3': '3px',
-        '4': '4px',
-       '6': '6px',
-       '8': '8px',
-      },
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+    },
     screens: {
-      mobile: '375px',
+      sm: '375px',
       // => @media (min-width: 375px) { ... }
-
-      desktop: '1440px',
+      lg: '1440px',
       // => @media (min-width: 1280px) { ... }
     },
     colors: {
@@ -50,6 +50,10 @@ module.exports = {
       },
       backgroundImage: {
         check: 'linear-gradient(to right bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%))',
+        dark: "url('/src/img/bg-desktop-dark.jpg')",
+        light: "url('/src/img/bg-desktop-light.jpg')",
+        darkmobile: "url('/src/img/bg-mobile-dark.jpg')",
+        lightmobile: "url('/src/img/bg-mobile-light.jpg')",
       },
       textColor: {
         primary: 'var(--color-text-primary)',

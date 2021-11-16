@@ -28,10 +28,7 @@
   --color-text-accent: hsl(234, 11%, 52%);
 }
 
-.dashboard{
-  width: 540px;
-  align-content: center;
-}
+
 
 body {
   margin: 0;
@@ -45,10 +42,26 @@ h1{
   font-size: 36px;
 }
 
-.form-control form {
+/* .form-control form {
   width: 100%;
-}
-.form-control form label,
+} */
+/* .form-control form label,
 #submitNewTodo {
   display: none;
+} */
+
+.dashboard{
+  width: 540px;
+  align-content: center;
+}
+
+
+input.middle:focus {
+    outline-width: 0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }

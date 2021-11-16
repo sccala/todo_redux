@@ -4,7 +4,7 @@ export const TodoFilter = ({ filterStatus, setFilterStatus }) => {
   }
 
   return (
-    <div className='flex gap-1.5 text-primary'>
+    <div className='flex w-full text-primary'>
       <button
         className={filterStatus === 'all' ? 'btn active' : 'btn'}
         onClick={() => handleClick('all')}

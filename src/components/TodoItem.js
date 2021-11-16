@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { useState } from 'react'
-import {  IncompletedIcon } from './CheckIcon'
+import { IncompletedIcon } from './CheckIcon'
 
 export const TodoItem = ({ todo, todos, setTodos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo)
@@ -18,12 +18,12 @@ export const TodoItem = ({ todo, todos, setTodos }) => {
 
   return (
     <>
-      <li className={`${classes} py-4`} >
+      <li className={`${classes} py-4`}>
         <label className='hidden' htmlFor={`todoCheckbox-${todo.id}`}>
           Completed Checkbox
         </label>
         <div className='flex '>
-          <div className='pt-2  flex'>
+          <div className='pt-2 flex'>
             <IncompletedIcon className='mr-2' onClick={checkIcon} />
             <p className=''>{mutableTodo.content}</p>
           </div>

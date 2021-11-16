@@ -27,22 +27,23 @@ export const TodoForm = ({ todos, setTodos }) => {
   }
 
   return (
-    <div className='form-control flex justify-items-stretch bg-white dark:bg-secondary items-center w-full'>
-      <form className='flex' onSubmit={handleSubmit}>
-        <IncompletedIcon onClick={onClickComplete} />
-        <input
-          type='text'
-          name='todo-input'
-          className='w-full h-12 shadow-lg rounded-md'
-          id='todoInput'
-          placeholder='Create a new todo...'
-          value={todoInput}
-          onChange={handleChange}
-        />
-        <button id='submitNewTodo' type='submit'>
-          Add
-        </button>
-      </form>
+    <div
+      className='items-center h-12 flex bg-white dark:bg-secondary w-full'
+      onSubmit={handleSubmit}
+    >
+      <IncompletedIcon className={`align-middle`} onClick={onClickComplete} />
+      <input
+        type='text'
+        name='todo-input'
+        className='w-full pl-4 bg-white dark:bg-secondary text-primary rounded-md'
+        id='todoInput'
+        placeholder='Create a new todo...'
+        value={todoInput}
+        onChange={handleChange}
+      />
+      <button className='hidden' type='submit'>
+        Add
+      </button>
     </div>
   )
 }

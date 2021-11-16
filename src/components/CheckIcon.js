@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 
-export const IncompletedIcon = ({ onClick }) => {
+export const IncompletedIcon = ({ onClick, className }) => {
   const [CheckCompletedIcon, setCheckCompletedIcon] = useState(false)
   const onClickCompletedIcon = () => {
     setCheckCompletedIcon(prevState => !prevState)
@@ -11,7 +11,7 @@ export const IncompletedIcon = ({ onClick }) => {
     <>
       {CheckCompletedIcon ? (
         <button
-          className='items-center py-2 px-2 mr-4  bg-check text-primary rounded-full w-7 h-7 sm:mt-0'
+          className={`${className} py-2 px-2 mr-4  bg-check text-primary rounded-full w-7 h-7 sm:mt-0`}
           onClick={onClickCompletedIcon}
         >
           <svg xmlns='http://www.w3.org/2000/svg' width='11' height='11'>
@@ -20,7 +20,7 @@ export const IncompletedIcon = ({ onClick }) => {
         </button>
       ) : (
         <button
-          className='items-center py-2 px-2 mr-4 bg-transparent border border-indigo-300 hover:border-indigo-400 text-indigo-400 rounded-full sm:mt-0 w-7 h-7'
+          className={`${className} py-2 px-2 mr-4 bg-transparent border border-indigo-300 hover:border-indigo-400 text-indigo-400 rounded-full sm:mt-0 w-7 h-7`}
           onClick={onClickCompletedIcon}
         ></button>
       )}
