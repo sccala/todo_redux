@@ -4,7 +4,6 @@ module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './src/components/*.{js,jsx}', './public/index.html'],
   darkMode: 'class',
-
   theme: {
     letterSpacing: {
       tightest: '-.075em',
@@ -15,7 +14,7 @@ module.exports = {
     },
     borderWidth: {
       DEFAULT: '1px',
-      0: '0',
+      0: '0.5px',
       2: '2px',
       3: '3px',
       4: '4px',
@@ -58,6 +57,7 @@ module.exports = {
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
         tertiary: 'var(--color-bg-tertiary)',
+        accent: 'var(--color-bg-accent)',
       },
       container: {
         padding: {

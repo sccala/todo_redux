@@ -4,21 +4,21 @@ export const TodoFilter = ({ filterStatus, setFilterStatus }) => {
   }
 
   return (
-    <div className='flex w-full text-primary'>
+    <div className='flex  justify-between w-full text-primary'>
       <button
-        className={filterStatus === 'all' ? 'btn active' : 'btn'}
+        className={`${filterStatus === 'all' ? 'btn active' : 'btn'} pr-4`}
         onClick={() => handleClick('all')}
       >
         All
       </button>
       <button
-        className={filterStatus === 'active' ? 'btn active' : 'btn'}
+        className={`{filterStatus === 'active' ? 'btn active' : 'btn'} pr-4`}
         onClick={() => handleClick('active')}
       >
         Active
       </button>
       <button
-        className={filterStatus === 'completed' ? 'btn active' : 'btn'}
+        className={`{filterStatus === 'completed' ? 'btn active' : 'btn'} pr-4`}
         onClick={() => handleClick('completed')}
       >
         Completed

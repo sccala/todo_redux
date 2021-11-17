@@ -16,7 +16,8 @@
   --color-bg-tertiary: hsl(233, 11%, 84%);
   --color-text-primary: hsl(235, 21%, 11%);
   --color-text-secondary: hsl(235, 24%, 19%);
-  --color-text-accent: hsl(236, 9%, 61%);
+  --color-text-tertiary: hsl(240, 10%, 15%);
+  --color-text-accent: hsl(236, 20%, 46%);
 }
 
 .dark {
@@ -25,7 +26,8 @@
   --color-bg-tertiary: hsl(234, 39%, 85%);
   --color-text-primary: hsl(0, 0%, 98%);
   --color-text-secondary: hsl(236, 33%, 92%);
-  --color-text-accent: hsl(234, 11%, 52%);
+  --color-text-tertiary: hsl(235, 11%, 78%);
+  --color-text-accent: hsl(233, 31%, 46%);
 }
 
 
@@ -41,16 +43,6 @@ body {
 h1{
   font-size: 36px;
 }
-
-/* .form-control form {
-  width: 100%;
-} */
-/* .form-control form label,
-#submitNewTodo {
-  display: none;
-} */
-
-
 
 input.middle:focus {
     outline-width: 0;

@@ -1,12 +1,9 @@
 import { useState } from 'react'
-import { IncompletedIcon } from './CheckIcon'
 
 const generateId = array => {
   const ids = array.map(item => item.id)
   return Math.max(...ids) + 1
 }
-
-const onClickComplete = () => {}
 
 export const TodoForm = ({ todos, setTodos }) => {
   const [todoInput, setTodoInput] = useState('')
@@ -27,15 +24,18 @@ export const TodoForm = ({ todos, setTodos }) => {
   }
 
   return (
-    <div
-      className='items-center pl-8 h-12 flex bg-white dark:bg-secondary w-full rounded-md shadow-lg mb-4'
+    <form
+      className='items-center pl-8 h-12 flex bg-white dark:bg-secondary  rounded-md shadow-lg my-8'
       onSubmit={handleSubmit}
     >
-      <IncompletedIcon className={`align-middle`} onClick={onClickComplete} />
+      <label className='hidden' htmlFor='todoInput'>
+        Add New Todo
+      </label>
+      <button className='align-middle bg-transparent border border-indigo-300 hover:border-indigo-400 text-indigo-400 rounded-full sm:mt-0 w-7 h-7'></button>
       <input
         type='text'
         name='todo-input'
-        className='w-full bg-white dark:bg-secondary text-primary '
+        className='w-11/12 bg-white dark:bg-secondary text-primary px-4'
         id='todoInput'
         placeholder='Create a new todo...'
         value={todoInput}
@@ -44,6 +44,6 @@ export const TodoForm = ({ todos, setTodos }) => {
       <button className='hidden' type='submit'>
         Add
       </button>
-    </div>
+    </form>
   )
 }
