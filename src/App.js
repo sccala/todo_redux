@@ -19,7 +19,6 @@ function App() {
   const [todos, setTodos] = useState(data)
   const [filterStatus, setFilterStatus] = useState('all')
   const [filteredTodos, setFilteredTodos] = useState(todos)
-  // const { theme, setTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     const handleFilter = () => {
