@@ -59,6 +59,7 @@ module.exports = {
         tertiary: 'var(--color-bg-tertiary)',
         accent: 'var(--color-bg-accent)',
       },
+
       container: {
         padding: {
           default: '0.5rem',
@@ -70,7 +71,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active', 'hover', 'focus'],
+      textColor: ['active', 'focus'],
+      button: ['active'],
+    },
   },
   plugins: [],
 }

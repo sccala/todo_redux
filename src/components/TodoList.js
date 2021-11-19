@@ -33,11 +33,11 @@ export const TodoList = ({ todos, setTodos, filteredTodos, filterStatus, setFilt
         <div className='w-full my-8 mx-auto text-center'>{leftTodoCount} items left</div>
 
         <div className='w-full flex justify-around mx-auto'>
-          <div className='control-btn group filter-control-for-desktop'>
+          <div>
             <TodoFilter filterStatus={filterStatus} setFilterStatus={setFilterStatus} />
           </div>
-          <div className='control-btn'>
-            <button className='btn items-end' onClick={clearCompletedTodos}>
+          <div >
+            <button className='active:text-indigo-500 active:text-bold items-end' onClick={clearCompletedTodos}>
               Clear Completed
             </button>
           </div>

@@ -14,10 +14,10 @@
   --color-bg-primary: hsl(0, 0%, 98%);
   --color-bg-secondary: hsl(236, 33%, 92%);
   --color-bg-tertiary: hsl(233, 11%, 84%);
-  --color-text-primary: hsl(235, 21%, 11%);
+  --color-text-primary: hsl(235, 11%, 20%);
   --color-text-secondary: hsl(235, 24%, 19%);
   --color-text-tertiary: hsl(240, 10%, 15%);
-  --color-text-accent: hsl(236, 20%, 46%);
+  --color-text-accent: hsl(236, 90%, 62%);
 }
 
 .dark {

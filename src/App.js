@@ -36,7 +36,7 @@ function App() {
 
   return (
     <ThemeProvider initialTheme>
-      <div className='md:dark:bg-dark md:bg-light sm:bg-lightmobile sm:dark:bg-darkmobile w-full h-screen bg-no-repeat bg-contain bg-primary mx-auto py-12'>
+      <div className='md:dark:bg-dark md:bg-light sm:bg-lightmobile sm:dark:bg-darkmobile w-full min-h-screen bg-no-repeat bg-contain bg-primary mx-auto py-12'>
         <div className='min-w-370 sm:w-11/12 md:w-3/5 lg:w-1/3 mx-auto my-0 content-center'>
           <div className='flex justify-between place-items-center'>
             <h1 className='text-gray-100 font-bold tracking-widest'>TODO</h1>

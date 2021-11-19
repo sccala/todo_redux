@@ -25,7 +25,7 @@ export const TodoForm = ({ todos, setTodos }) => {
 
   return (
     <form
-      className='items-center pl-8 h-12 flex bg-white dark:bg-secondary  rounded-md shadow-lg my-8'
+      className='items-center pl-8 h-16 flex bg-white dark:bg-secondary  rounded-md shadow-lg my-8'
       onSubmit={handleSubmit}
     >
       <label className='hidden' htmlFor='todoInput'>
