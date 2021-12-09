@@ -4,7 +4,8 @@ import { DarkModeToggle } from './button/Toggle'
 import { Footer } from './components/Footer'
 import { TodoForm } from './components/TodoForm'
 import { TodoList } from './components/TodoList'
-import { ThemeProvider } from './hooks/providers/themeContext'
+
+import { BrowserRouter } from 'react-router-dom'
 
 const data = [
   { id: 1, content: 'Complete online JavsScript course', completed: true },
@@ -12,8 +13,9 @@ const data = [
   { id: 3, content: '10 minutes meditation', completed: false },
   { id: 4, content: 'Read for 1 hour', completed: false },
   { id: 5, content: 'Pick up groceries', completed: false },
-  { id: 6, content: 'Complete Todo App on Frontend Mentor', completed: false },
+  { id: 6, content: 'Complete Todo App on Frontend Mentor', completed: false }
 ]
+
 
 function App() {
   const [todos, setTodos] = useState(data)
@@ -35,7 +37,7 @@ function App() {
   }, [todos, filterStatus])
 
   return (
-    <ThemeProvider initialTheme>
+    <BrowserRouter>
       <div className='md:dark:bg-dark md:bg-light sm:bg-lightmobile sm:dark:bg-darkmobile w-full min-h-screen bg-no-repeat bg-contain bg-primary mx-auto py-12'>
         <div className='min-w-370 sm:w-11/12 md:w-3/5 lg:w-1/3 mx-auto my-0 content-center'>
           <div className='flex justify-between place-items-center'>
@@ -53,8 +55,7 @@ function App() {
         </div>
         <Footer />
       </div>
-      {/* </div> */}
-    </ThemeProvider>
+    </BrowserRouter>
   )
 }
 

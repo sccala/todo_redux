@@ -1,12 +1,12 @@
-import { memo, useContext } from 'react'
-import { ThemeContext } from '../hooks/providers/themeContext'
+import { memo } from 'react'
+import { useDarkMode } from '../hooks/useDarkMode'
 
 export const DarkModeToggle = memo(() => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const [isDark, setIsDark] = useDarkMode()
 
   return (
-    <div className='text-gray-100' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {theme === 'dark' ? (
+    <div className='text-gray-100' onClick={() => setIsDark(prevState => !prevState)}>
+      {isDark ? (
         <svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'>
           <path
             fill='currentColor'
