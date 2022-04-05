@@ -1,26 +1,15 @@
 import { useState } from 'react'
+import { connect } from 'react-redux'
+import * as todoActions from '../redux/ActionCreators'
 
-const generateId = array => {
-  const ids = array.map(item => item.id)
-  return Math.max(...ids) + 1
-}
 
-export const TodoForm = ({ todos, setTodos }) => {
-  const [todoInput, setTodoInput] = useState('')
-  const handleChange = e => {
-    setTodoInput(e.target.value)
-  }
+const TodoForm = ({ newTodos, todoAdd }) => {
+  const [name, setName] = useState('')
+   const handleChange = event => {
+     setName(event.target.value)
+   }
   const handleSubmit = e => {
-    e.preventDefault()
-    if (todoInput) {
-      const newTodo = {
-        id: generateId(todos),
-        content: todoInput.trim(),
-        completed: false,
-      }
-      setTodos([newTodo, ...todos])
-      setTodoInput('')
-    }
+      todoAdd(e.target.value)
   }
 
   return (
@@ -38,7 +27,7 @@ export const TodoForm = ({ todos, setTodos }) => {
         className='w-11/12 bg-white dark:bg-secondary text-primary px-4'
         id='todoInput'
         placeholder='Create a new todo...'
-        value={todoInput}
+        value={name}
         onChange={handleChange}
       />
       <button className='hidden' type='submit'>
@@ -47,3 +36,8 @@ export const TodoForm = ({ todos, setTodos }) => {
     </form>
   )
 }
+function mapDispatchToProps(dispatch) {
+  return { addTodo: todo => dispatch(todoActions.addTodo(todo)) }
+}
+
+export default connect(null, mapDispatchToProps)(TodoForm)

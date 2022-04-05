@@ -1,4 +1,9 @@
-import { createStore } from 'redux'
-import { Reducer } from './reducer'
+import { combineReducers, createStore } from 'redux'
+import { filterReducer } from './reducers/filterReducer'
+import { todoReducer } from './reducers/todoReducer'
 
-export default createStore(Reducer)
+export const ConfigureStore = () => {
+  const store = createStore(
+      combineReducers({ todoReducer, filterReducer }))
+  return store
+}

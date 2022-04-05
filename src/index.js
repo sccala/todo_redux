@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { Reducer } from './redux/reducer.js'
+import { ConfigureStore } from './redux/configureStore'
 
-const events = createStore(Reducer)
+const store = ConfigureStore()
 
 ReactDOM.render(
-  <Provider store={events}>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')

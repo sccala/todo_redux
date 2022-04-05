@@ -2,9 +2,8 @@
 import { useEffect, useState } from 'react'
 import { DarkModeToggle } from './button/Toggle'
 import { Footer } from './components/Footer'
-import { TodoForm } from './components/TodoForm'
+import  TodoForm  from './components/TodoForm'
 import { TodoList } from './components/TodoList'
-
 import { BrowserRouter } from 'react-router-dom'
 
 const data = [
@@ -15,7 +14,6 @@ const data = [
   { id: 5, content: 'Pick up groceries', completed: false },
   { id: 6, content: 'Complete Todo App on Frontend Mentor', completed: false }
 ]
-
 
 function App() {
   const [todos, setTodos] = useState(data)
