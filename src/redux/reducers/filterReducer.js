@@ -1,4 +1,4 @@
-import * as constants from '../constants'
+import * as constants from '../actions/constants'
 
 export const filterReducer = (state = [], action) => {
   const newTodos = Object.assign([], state)
